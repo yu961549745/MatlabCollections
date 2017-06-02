@@ -1,0 +1,10 @@
+clc,clear,close all;
+im=rgb2gray(im2double(imread('hy.jpg')));
+bw=im2bw(im,graythresh(im));
+[L,n]=bwlabel(bw,4);
+cim=1-im2double(label2rgb(L,rand(n,3)*0.5));
+figure;
+imagesc(cim);
+axis equal;
+axis tight;
+imwrite(cim,'res.jpg');
