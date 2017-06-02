@@ -1,0 +1,1 @@
+Print[FindShortestTour[WeightedAdjacencyGraph[Import["graph.txt", "Table"]],PerformanceGoal -> "Quality"]]
