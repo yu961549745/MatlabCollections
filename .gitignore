@@ -1,4 +1,4 @@
 *.gif
-*.jpg
-*.jpeg
-/ATSP/graph.txt
+/ATSP/*.txt
+/照片拼图/*.jpg
+/照片拼图/*/*.jpg 
