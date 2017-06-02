@@ -1,5 +1,5 @@
 clc,clear,close all;
-p=rand(200,2);
+p=rand(100,2);
 d=pdist2(p,p);
 
 tic
