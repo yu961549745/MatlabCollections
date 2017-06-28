@@ -1,5 +1,6 @@
 #include <mex.h>
 #include <blas.h>
+// 两个实数矩阵的乘法
 void mexFunction(int nlhs, mxArray** plhs, int nrhs, mxArray** prhs){
 	// N 表示不转置，T或者C表示转置
 	char* t = "N";
