@@ -1,9 +1,9 @@
 #include <mex.h>
 #include <blas.h>
 // 两个实数矩阵的乘法
-void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]){
+void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]){// 最严格的定义
 	// N 表示不转置，T或者C表示转置
-	char t[] = "N";
+	char t[] = "N";// C++11 禁止将字符串转换为指针
 	const mxArray* A = prhs[0];
 	const mxArray* B = prhs[1];
 	if (mxGetNumberOfDimensions(A) != 2 || mxGetNumberOfDimensions(B) != 2){
@@ -39,5 +39,6 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]){
 		&k,// size(B,1)
 		&beta,
 		mC,// C
-		&m);// size(C,1)
+		&m// size(C,1)
+	);
 }
