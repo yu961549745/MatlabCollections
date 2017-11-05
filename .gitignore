@@ -4,3 +4,4 @@
 /照片拼图/*/*.jpg 
 /OpenCVMex/*.mex*
 /mexBLAS/*.mex*
+*.pyc
