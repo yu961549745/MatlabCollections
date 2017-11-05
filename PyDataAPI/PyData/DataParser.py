@@ -6,7 +6,8 @@ def mx2py(x, dtype):
     """ parse matlab array to numpy array """
     sz = list(map(int, x['shape'].tolist()))
     y = x['data']
-    return np.array(y, dtype=np.dtype(dtype)).reshape(sz, order='F')
+    # TensorFlow 如果 order='F' 速度会慢将近两倍
+    return np.array(np.array(y, dtype=np.dtype(dtype)).reshape(sz, order='F'), order='C')
 
 
 class mxArray(object):
