@@ -1,5 +1,11 @@
 clc,clear,close all;
 
+%% ¼òµ¥´Ö±©
+figure('Position',[1,41,1920,1082])
+
+%% ÓÐµãÆ«²î
+figure('Position',get(0,'ScreenSize'))
+
 %% User32 API maximize window
 % but it just for the Windows OS
 tic
