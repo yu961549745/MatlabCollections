@@ -12,6 +12,7 @@ conn = database(...
     ['jdbc:mysql://localhost:3306/sys',...% db url
     '?useSSL=true&useUnicode=true&characterEncoding=utf8&']...% connection parameters
     );
+disp(conn);
 %% query
 curs = exec(conn,'select * from sys_config;');
 curs = fetch(curs);
