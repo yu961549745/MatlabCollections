@@ -5,3 +5,4 @@
 /OpenCVMex/*.mex*
 /mexBLAS/*.mex*
 *.pyc
+*.jar

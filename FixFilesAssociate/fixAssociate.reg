@@ -40,11 +40,23 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CLASSES_ROOT\MATLAB.mdl.9.3.0]
 
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mdl]
+
 ;REMOVES MDLP FILE ASSOCIATIONS
 
 [-HKEY_CLASSES_ROOT\.mdlp]
 
 [-HKEY_CLASSES_ROOT\MATLAB.mdlp.9.3.0]
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mdlp]
+
+;REMOVES MEXW32 FILE ASSOCIATIONS
+
+[-HKEY_CLASSES_ROOT\.mexw32]
+
+[-HKEY_CLASSES_ROOT\MATLAB.mexw32.9.3.0]
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mexw32]
 
 ;REMOVES MEXW64 FILE ASSOCIATIONS
 
@@ -52,11 +64,15 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CLASSES_ROOT\MATLAB.mexw64.9.3.0]
 
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mexw64]
+
 ;REMOVES MN FILE ASSOCIATIONS
 
 [-HKEY_CLASSES_ROOT\.mn]
 
 [-HKEY_CLASSES_ROOT\MATLAB.mn.9.3.0]
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mn]
 
 ;REMOVES MU FILE ASSOCIATIONS
 
@@ -64,17 +80,23 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CLASSES_ROOT\MATLAB.mu.9.3.0]
 
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mu]
+
 ;REMOVES MUPHLP FILE ASSOCIATIONS
 
 [-HKEY_CLASSES_ROOT\.muphlp]
 
 [-HKEY_CLASSES_ROOT\MATLAB.muphlp.9.3.0]
 
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.muphlp]
+
 ;REMOVES P FILE ASSOCIATIONS
 
 [-HKEY_CLASSES_ROOT\.p]
 
 [-HKEY_CLASSES_ROOT\MATLAB.p.9.3.0]
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.p]
 
 ;REMOVES SLX FILE ASSOCIATIONS
 
@@ -90,17 +112,23 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CLASSES_ROOT\MATLAB.ssc.9.3.0]
 
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.ssc]
+
 ;REMOVES XVC FILE ASSOCIATIONS
 
 [-HKEY_CLASSES_ROOT\.xvc]
 
 [-HKEY_CLASSES_ROOT\MATLAB.xvc.9.3.0]
 
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.xvc]
+
 ;REMOVES XVZ FILE ASSOCIATIONS
 
 [-HKEY_CLASSES_ROOT\.xvz]
 
 [-HKEY_CLASSES_ROOT\MATLAB.xvz.9.3.0]
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.xvz]
 
 ;REMOVES MLAPP FILE ASSOCIATIONS
 
@@ -132,17 +160,23 @@ Windows Registry Editor Version 5.00
 
 [-HKEY_CLASSES_ROOT\MATLAB.req.9.3.0]
 
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.req]
+
 ;REMOVES SLDD FILE ASSOCIATIONS
 
 [-HKEY_CLASSES_ROOT\.sldd]
 
 [-HKEY_CLASSES_ROOT\MATLAB.sldd.9.3.0]
 
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.sldd]
+
 ;REMOVES SLDDC FILE ASSOCIATIONS
 
 [-HKEY_CLASSES_ROOT\.slddc]
 
 [-HKEY_CLASSES_ROOT\MATLAB.slddc.9.3.0]
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.slddc]
 
 ;REMOVES MLAPPINSTALL FILE ASSOCIATIONS
 
@@ -157,6 +191,8 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\.mlpkginstall]
 
 [-HKEY_CLASSES_ROOT\MATLAB.mlpkginstall.9.3.0]
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mlpkginstall]
 
 ;REMOVES SLXP FILE ASSOCIATIONS
 
@@ -173,6 +209,14 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\MATLAB.sltx.9.3.0]
 
 [-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.sltx]
+
+;REMOVES MLPRJ FILE ASSOCIATIONS
+
+[-HKEY_CLASSES_ROOT\.mlprj]
+
+[-HKEY_CLASSES_ROOT\MATLAB.mlprj.9.3.0]
+
+[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.mlprj]
 
 ;ADD SHELL OPEN
 
