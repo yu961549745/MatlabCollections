@@ -1,14 +1,13 @@
-#include<map>
+#include<unordered_map>
 #include<mex.h>
 using namespace std;
-
 void mexFunction(int nlhs, mxArray* plhs[], int nrhs, mxArray* prhs[]) {
 	mxArray* mxX = prhs[0];
 
-	map<double, int> xmap;
+	unordered_map<double, int> xmap;
 	double* px = mxGetPr(mxX);
 	int n = mxGetNumberOfElements(mxX);
-	for (int k = 0; k < n; k++){
+	for (int k = 0; k < n; k++) {
 		xmap[px[k]]++;
 	}
 	int m = xmap.size();
@@ -21,10 +20,10 @@ void mexFunction(int nlhs, mxArray* plhs[], int nrhs, mxArray* prhs[]) {
 	double* pUX = mxGetPr(mxUX);
 	double* pNX = mxGetPr(mxNX);
 
-	map<double, int>::iterator iter = xmap.begin();
-	for (int k = 0; k < m; k++){
-		pUX[k] = (*iter).first;
-		pNX[k] = (*iter).second;
-		iter++;
+	for (auto iter = xmap.begin(); iter != xmap.end();iter++) {
+		*pUX = iter->first;
+		*pNX = iter->second;
+		pUX++;
+		pNX++;
 	}
 }
