@@ -1,12 +1,16 @@
 function t = readtext(f,encoding)
-if nargin<2
-    opts={};
-else
-    opts={'n',encoding};
+% 按照指定编码读入文件
+s=cell(1,10);
+k=1;
+fid=fopen(f,'r','n',encoding);
+while true
+    t=fgetl(fid);
+    if t==-1 
+        break;
+    end
+    s{k}=[t,newline];
+    k=k+1;
 end
-fid=fopen(f,'r',opts{:});
-t=textscan(fid,'%[^\n]');
 fclose(fid);
-t=t{1};
-t=sprintf('%s\n',t{:});
+t=sprintf('%s',s{:});
 end
