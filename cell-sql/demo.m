@@ -1,7 +1,12 @@
 clc,clear,close all;
-data={'a',1;
-    'b',-1;
-    'c',3;
-    'e',2;
-    'd',3};
-cellsql(data,{'A','B'},'cd','select * from tmp where B>1 order by B,A','tmp')
+javaaddpath('sqlite.jar');
+data={
+    'A','B';
+    'a',1;
+    'a',2;
+    'b',1;
+    'b',3;
+    'c',4;
+    'a',4};
+cells_sql(data,'cd','tmp','select A,max(B) from tmp group by A order by A')
+cells_sql(data,'cd','tmp','select B,A from tmp order by B,A')
