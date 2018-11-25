@@ -4,15 +4,18 @@ function fs = getFiles(path,reg,exReg)
 if nargin<3
     % 默认无视 windows 下的 db 文件
     % 和 mac 下的 . 开头的索引文件
-    % 以及 . 和 .. 
-    exReg='(.*\.db)|(^\.{1,2}.*)';
+    exReg='(.*\.db)|(^\..*)';
     if nargin<2
         reg='';
     end
 end
 % 按文件名筛选
-fs=dir(path);
-fs=arrayfun(@(f){f.name},fs);
+sfs=dir(path);
+fs=arrayfun(@(f){f.name},sfs);
+fds=arrayfun(@(f){f.folder},sfs);
+dfs=arrayfun(@(f)f.isdir,sfs);
+fs=fs(~dfs);
+fds=fds(~dfs);
 if ~isempty(reg)
     ind=cellfun(@(s)~isempty(regexp(s,reg,'once')),fs);
 else
@@ -24,6 +27,6 @@ else
     exInd=false(size(fs));
 end
 fs=fs(ind&(~exInd));
-% 加上路径
-fs=cellfun(@(f){fullfile(path,f)},fs);
+fds=fds(ind&(~exInd));
+fs=cellfun(@(p,f){fullfile(p,f)},fds,fs);
 end
