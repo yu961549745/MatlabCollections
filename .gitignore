@@ -6,3 +6,4 @@
 /mexBLAS/*.mex*
 *.pyc
 *.jar
+/签名抠图/*.png
