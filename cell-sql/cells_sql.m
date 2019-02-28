@@ -9,5 +9,5 @@ setdbprefs('NullStringWrite','');
 conn=database('','','','org.sqlite.JDBC',sprintf('jdbc:sqlite:%s',dbfile));
 res=query_cells(conn,varargin{:});
 close(conn);
-delete(dbfile);
+% delete(dbfile);
 end

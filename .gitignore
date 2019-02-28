@@ -7,3 +7,5 @@
 *.pyc
 *.jar
 /签名抠图/*.png
+/ChangeFileEncode/fs/*
+!/ChangeFileEncode/lib.jar 
