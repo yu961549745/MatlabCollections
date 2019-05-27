@@ -254,7 +254,7 @@ static void Transform(UINT4 *buf, UINT4 *in){
 
 #include <mex.h>
 
-void mexFunction(int nlhs, mxArray* plhs[], int nrhs, mxArray* prhs[]){
+void mexFunction(int nlhs, mxArray* plhs[], int nrhs, const mxArray* prhs[]){
 	char* fname = mxArrayToString(prhs[0]);
 
 	FILE *inFile = fopen(fname, "rb");
